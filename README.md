@@ -1,6 +1,7 @@
 # bondy-desafio-fullstack
 
 ## Estrutura do repositório:
+
 Este projeto é um monorepo construído com Lerna (para saber mais => https://lerna.js.org/)
 
 - `backend` (API Graphql para realizar desafio de backend)
@@ -18,6 +19,7 @@ packages/
 
 package.json
 ```
+
 Para executar os scripts presentes nos arquivos package.json:
 
 - `yarn lerna run` + comando (ex: `yarn lerna run test:coverage`)
@@ -27,7 +29,9 @@ Para executar os scripts presentes nos arquivos package.json:
 ## O que deve ser feito
 
 ### Backend:
-Utilizar a estrutura existente para criar uma mutation para realização de um login, a mesma deve receber email e senha e fazer verificação no banco se as informações estão corretas:
+
+Utilizar a estrutura existente para criar uma mutation de realização de login, e a mesma deve receber email e senha para fazer verificação no banco se as informações estão corretas:
+
 - O projeto está configurado com Node 18, dar yarn na raiz para baixar dependências.
 - O projeto já está configurado apontado para o banco MongoDB de testes;
 - As configurações do banco estão no arquivo src/memoryDB/connection.ts
@@ -36,7 +40,9 @@ Utilizar a estrutura existente para criar uma mutation para realização de um l
 - Ao rodar o projeto com `yarn start` será apresentado no console a url para o Playground para testes de graphql;
 
 ### Frontend:
+
 Criar um projeto frontend dentro da pasta packages/frontend:
+
 - O projeto deve se conectar com o backend e realizar as consultas via graphql;
-- Deve conter uma pagina de login, com campo de e-mail e senha;
-- Ao passar os dados corretamente o usuário deve ser direciona a uma pagina de boas-vindas;
+- Deve conter uma página de login, com campo de e-mail e senha;
+- Ao passar os dados corretamente, o usuário deve ser direcionado para uma página de boas-vindas;
