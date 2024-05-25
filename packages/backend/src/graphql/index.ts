@@ -31,8 +31,11 @@ const buildContext = startServerAndCreateLambdaHandler(
   {
     context: async ({ event, context }) => {
       context.callbackWaitsForEmptyEventLoop = false
+
       console.log(`Connected in ${NODE_ENV} environment`)
+
       await connection()
+
       return {
         headers: event.headers,
         functionName: context.functionName,
