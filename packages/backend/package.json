@@ -5,6 +5,7 @@
   "main": "handler.ts",
   "scripts": {
     "start": "NODE_ENV=local serverless offline --stage local",
+    "start:win": "set NODE_ENV=local && serverless offline --stage local",
     "eslint": "eslint ./src --ext .ts,.js",
     "eslint:fix": "npm run prettier-format && eslint ./src --ext .ts,.tsx --quiet --fix",
     "prettier-format": "prettier --write .",
