@@ -17,6 +17,12 @@
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "dot-notation": "off",
-      "no-use-before-define": "off"
+      "no-use-before-define": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
     }
   }
