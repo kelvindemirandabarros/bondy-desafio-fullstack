@@ -1,13 +1,15 @@
-import typeDefs from '../typeDefs'
 import { ApolloServer } from '@apollo/server'
 import { ApolloServerPluginInlineTraceDisabled } from '@apollo/server/plugin/disabled'
+import { buildSubgraphSchema } from '@apollo/subgraph'
 import {
   handlers,
   startServerAndCreateLambdaHandler,
 } from '@as-integrations/aws-lambda'
-import { buildSubgraphSchema } from '@apollo/subgraph'
-import resolvers from './resolvers'
+
 import { connection } from '../memoryDB/connection'
+
+import typeDefs from '../typeDefs'
+import resolvers from './resolvers'
 
 const { NODE_ENV = 'local' } = process.env
 
